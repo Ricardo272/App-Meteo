@@ -1,0 +1,84 @@
+body {
+  background: url(img/mountains-1985027_1280.jpg) center/cover no-repeat;
+  font-family: "Signika", sans-serif;
+  color: whitesmoke;
+}
+body .menu-bar {
+  border-radius: 1.5625rem;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  filter: drop-shadow(2px 4px 6px black);
+}
+body .menu-bar li {
+  list-style: none;
+  color: white;
+  font-weight: bold;
+  padding: 12px 16px;
+  margin: 0 8px;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+body .menu-bar li::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+body .menu-bar li:hover {
+  color: black;
+}
+body .menu-bar li:hover::before {
+  background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+  box-shadow: 0rem 0.1875rem 1.25rem 0rem black;
+  transform: scale(1.2);
+}
+body .weatherData {
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border: solid;
+  padding: 1.5rem;
+  filter: drop-shadow(2px 4px 6px black);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 1.5625rem;
+}
+body .weatherData .jourActuel {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border: solid;
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 1.5625rem;
+  cursor: pointer;
+}
+body .weatherData .jourActuel::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+body .weatherData .jourActuel:hover {
+  background: linear-gradient(to bottom, #063c31, #d2d1d3);
+  box-shadow: 0rem 0.1875rem 1.25rem 0rem black;
+  transform: scale(1.2);
+  color: black;
+}/*# sourceMappingURL=style.css.map */
