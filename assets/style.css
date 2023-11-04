@@ -3,6 +3,46 @@ body {
   font-family: "Signika", sans-serif;
   color: whitesmoke;
 }
+body .btnSearch {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0 10px;
+  border-radius: 1.5625rem;
+  filter: drop-shadow(2px 4px 6px black);
+}
+body .btnSearch #search {
+  font-family: "Signika", sans-serif;
+  margin: 1rem 0 1rem 1rem;
+  border-radius: 1.5625rem;
+  border: none;
+  padding: 0.3rem;
+}
+body .btnSearch button {
+  font-family: "Signika", sans-serif;
+  margin: 1rem 1rem 1rem 0rem;
+  border-radius: 1.5625rem;
+  border: none;
+  padding: 0.3rem;
+}
+body .btnSearch button::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+body .btnSearch button:hover::before {
+  background: linear-gradient(to bottom, rgb(8, 118, 145), #d2d1d3);
+  box-shadow: 0rem 0.1875rem 1.25rem 0rem black;
+  transform: scale(1.2);
+}
 body .menu-bar {
   border-radius: 1.5625rem;
   display: flex;
@@ -23,6 +63,7 @@ body .menu-bar li {
   position: relative;
   cursor: pointer;
   white-space: nowrap;
+  font-size: 1.5rem;
 }
 body .menu-bar li::before {
   content: " ";
@@ -39,7 +80,7 @@ body .menu-bar li:hover {
   color: black;
 }
 body .menu-bar li:hover::before {
-  background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+  background: linear-gradient(to bottom, rgb(8, 118, 145), #d2d1d3);
   box-shadow: 0rem 0.1875rem 1.25rem 0rem black;
   transform: scale(1.2);
 }
@@ -77,8 +118,77 @@ body .weatherData .jourActuel::before {
   border-radius: 25px;
 }
 body .weatherData .jourActuel:hover {
-  background: linear-gradient(to bottom, #063c31, #d2d1d3);
+  background: linear-gradient(to bottom, #3beecb, #d2d1d3);
   box-shadow: 0rem 0.1875rem 1.25rem 0rem black;
   transform: scale(1.2);
   color: black;
+}
+
+@media screen and (min-width: 768px) {
+  body .weatherData {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border: solid;
+    padding: 1.5rem;
+    filter: drop-shadow(2px 4px 6px black);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 1.5625rem;
+  }
+  body .weatherData .jourActuel .info p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body .weatherData {
+    display: flex;
+  }
+  body .weatherData .jourActuel .info p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body .weatherData {
+    display: flex;
+    flex-wrap: nowrap;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body .weatherData .jourActuel {
+    display: flex;
+    flex-direction: column;
+  }
+  body .weatherData .jourActuel .img {
+    margin: 1rem;
+  }
+  body .weatherData .jourActuel .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .weatherData .jourActuel .info .p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  body .weatherData {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  body .weatherData .jourActuel {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body .weatherData .jourActuel img {
+    width: 8rem;
+  }
+  body .weatherData .jourActuel .info p {
+    margin: 2.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
